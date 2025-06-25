@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    background-image: url('/home/otherkid/GolfGames/Capture.PNG');
+    background-image: url('Capture.PNG');
     justify-content: center;
 }
 .header h1{
