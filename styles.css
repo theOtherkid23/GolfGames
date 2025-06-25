@@ -1,0 +1,99 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    background-image: url('/home/otherkid/GolfGames/Capture.PNG');
+    justify-content: center;
+}
+.header h1{
+    background-color: black;
+    width: 100vw;
+    height: 15vh;
+    margin: 0;
+}
+h1{
+    margin-top: 0;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.buttons{
+    display: flex;
+    height:90vh;
+    width:90vw;
+    /*border: 2px, solid, red;*/
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.spContainer, .mpContainer, .scrambleContainer, .wolfContainer{
+    /*border:2px, solid, red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width:40vw;
+    height: 40vh;
+    margin: 2%;
+}
+.spContainer img, .mpContainer img, .scrambleContainer img, .wolfContainer img{
+    width:100%;
+    height:100%;
+    border-radius: 41px;
+}
+.overlay1, .overlay2, .overlay3, .overlay4{
+    position:absolute;
+    border-radius: 41px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0%;
+}
+.overlay1, .spText{
+    top:0;
+    left:0;
+}
+.overlay2, .mpText{
+    top:0;
+    right:0;
+}
+.overlay3, .scrambleText{
+    bottom:0;
+    left:0;
+}
+.overlay4, .wolfText{
+    bottom:0;
+    right:0;
+}
+.spText, .mpText, .scrambleText, .wolfText{
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    opacity:0%;
+    transition: opacity 0.3s ease;
+}
+.spContainer:hover .spText, .spContainer:hover .overlay1{
+    opacity:1;
+}
+.mpContainer:hover .mpText, .mpContainer:hover .overlay2{
+    opacity:1;
+}
+.scrambleContainer:hover .scrambleText, .scrambleContainer:hover .overlay3{
+    opacity:1;
+}
+.wolfContainer:hover .wolfText, .wolfContainer:hover .overlay4{
+    opacity:1;
+}
