@@ -8,7 +8,7 @@ body{
 .header h1{
     background-color: black;
     width: 100vw;
-    height: 15vh;
+    height: 20vh;
     margin: 0;
 }
 h1{
@@ -74,16 +74,19 @@ h1{
 }
 .spText, .mpText, .scrambleText, .wolfText{
     display: flex;
+    /*border: 2px, solid, red;*/
     position:absolute;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     text-align: center;
     color: white;
     font-size: 48px;
     opacity:0%;
-    transition: opacity 0.3s ease;
+    transition: 1.5s ease;
+    margin:0;
+    border-radius: 41px;
 }
 .spContainer:hover .spText, .spContainer:hover .overlay1{
     opacity:1;
@@ -96,4 +99,10 @@ h1{
 }
 .wolfContainer:hover .wolfText, .wolfContainer:hover .overlay4{
     opacity:1;
+}
+/*Media Query to adjust the height of container for images on mobile devices*/
+@media(max-width: 768px){
+    .spContainer, .mpContainer, .scrambleContainer, .wolfContainer{
+        max-height: 25vh;
+    }
 }
